@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en" class="dark" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>    المقالات | الاكاديمية الذهبية </title>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="icon" href="assets/images/logo-Academy.webp" type="image/x-icon">
+    
+    <!-- google fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Manrope:wght@200..800&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+
+<!-- font Awesome -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- SwiperJS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+      <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    
+</head>
+<body class="flex flex-col min-h-screen">
+
+<!-- Start Navbar -->
+
+<nav class="fixed top-0 left-0 z-50 w-full bg-white border-gray-200 dark:bg-slate-800 drop-shadow-lg">
+  <div class="flex flex-wrap items-center justify-between max-w-screen-xl p-1 mx-auto">
+  <a href="index.html" class="flex items-center space-x-1 rtl:space-x-reverse">
+      <img src="assets/images/logo-Academy.webp" class="h-[90px] w-25" alt="Flowbite Logo" />
+      <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">الأكاديمية الذهبية  </span>
+  </a>
+  <div class="flex space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse">
+      <button type="button" class="px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg dark:bg-yellow-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300  dark:hover:bg-blue-700 dark:focus:ring-blue-800">ابدأ الآن </button>
+      <button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-cta" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+  </div>
+  <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+    <ul class="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg md:items-center md:p-0 bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+      <li>
+        <a href="index.html" class="block px-3 py-2 text-white rounded-sm md:p-0 md:bg-transparent md:text-blue-700 md:dark:text-yellow-500" aria-current="page">الرئيسية</a>
+      </li>
+      <li>
+        <a href="#courses" class="block px-3 py-2 text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-yellow-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">الكورسات</a>
+      </li>
+      <li>
+        <a href="#faq" class="block px-3 py-2 text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-yellow-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">FAQ</a>
+      </li>
+      <li>
+        <a href="#Blog" class="block px-3 py-2 text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-yellow-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">مقالات</a>
+      </li>
+
+      <li class="md:mr-[20px]">
+        <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-lg text-sm p-2.5">
+    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+    </button>
+      </li>
+
+    </ul>
+  </div>
+  </div>
+</nav>
+
+<!-- End Navbar -->
+
+
+
+
+
+<!-- start blog-page-header -->
+
+<section class="pt-[150px] pb-[75px] bg-blue-100 dark:bg-slate-700 ">
+    <div class="flex max-w-screen-xl mx-auto page-header justify-content-between">
+        <div class="flex flex-col justify-center grow">
+            <h1 class=" text-center md:text-right mb-5 text-4xl font-bold text-blue-00 dark:text-yellow-500 ">
+                الذكاء الاصطناعي وتأثير الايجابي والسلبي على الاطفال
+            </h1>
+            <p class="text-center md:text-right mb-4 font-bold dark:text-gray-200">  الكاتب : <span > محمود الشامي</span></p>
+
+            <div class=" flex justify-center md:justify-start gap-3 dark:text-gray-300">
+                <div>
+                    <i class="text-xl fa-regular fa-circle-check"></i>
+                    2025 / نيسان
+                </div>
+
+                 <div>
+                    <i class="text-xl fa-solid fa-list"></i>
+                   التصنيف : AI              
+                </div>
+
+                 <div>
+                   <i class="text-xl fa-solid fa-globe"></i>
+                    العربية
+                </div>
+            </div>
+        </div>
+        
+
+
+    </div>
+</section>
+
+<!-- end course-page-header -->
+
+
+
+
+
+
+<section class="main-content  dark:bg-gray-800">
+  <div class="max-w-screen-xl mx-auto inner-content flex flex-col-reverse md:flex-row justify-between gap-5">
+
+    <div class="content m-3 md:m-0  grow dark:text-gray-300">
+
+      <div class="my-3">
+ 
+        <nav class="flex" aria-label="Breadcrumb">
+        <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+            <li class="inline-flex items-center">
+            <a href="#" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
+                <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
+                </svg>
+                الرئيسية
+            </a>
+            </li>
+            <li>
+            <div class="flex items-center">
+                <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                </svg>
+                <a href="#" class="ms-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white">المقالات</a>
+            </div>
+            </li>
+            <li aria-current="page">
+            <div class="flex items-center">
+                <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                </svg>
+                <span class="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400">الذكاء الاصطناعي وتأثيره ...</span>
+            </div>
+            </li>
+        </ol>
+        </nav>
+      </div>
+
+    <img class="w-full p-3 rounded-4xl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGpqvos-VlvuaV_2gj-Q76vCjHJC8VkDh-kQ&s" alt="">
+
+    <div class=" p-3 rounded-[10px] bg-gray-100 dark:bg-gray-900 flex justify-between gap-4 ">
+        <i class="fa-brands fa-facebook text-2xl cursor-pointer"></i>
+        <i class="fa-brands fa-instagram text-2xl cursor-pointer"></i>
+        <i class="fa-brands fa-whatsapp text-2xl cursor-pointer"></i>
+        <i class="fa-brands fa-twitter text-2xl cursor-pointer"></i>
+
+        <div class="">
+            <p>بقلم الكاتب محمود الشامي</p>
+        </div>
+
+    </div>
+
+    <p class="my-4 leading-10 bg-gray-100 p-4 rounded-[10px] dark:bg-gray-900">
+        يشهد العالم اليوم تطورًا هائلًا في مجال التكنولوجيا، ويُعد الذكاء الاصطناعي من أبرز هذه الابتكارات التي غيرت طريقة حياتنا وتعلمنا. ومع دخول هذه التقنية إلى التعليم والألعاب وحتى التطبيقات اليومية، أصبح الأطفال أكثر عرضة للتفاعل معها. هذا الأمر يفتح الباب أمام فوائد كبيرة، لكنه في الوقت ذاته يثير بعض التحديات والمخاطر التي يجب الانتباه إليها.
+    </p>
+
+    <div class="my-4 leading-10 bg-gray-100 p-4 rounded-[10px] dark:bg-gray-900">
+          <h2 class="text-2xl font-bold pb-2">التأثير الإيجابي للذكاء الاصطناعي على الأطفال</h2>
+           
+           <li class="p-2">
+            تحسين عملية التعلم: توفر تطبيقات الذكاء الاصطناعي أدوات تعليمية ذكية تساعد الأطفال على التعلم بطرق ممتعة وتفاعلية، مثل التطبيقات التي تشرح الرياضيات أو اللغات من خلال الألعاب.
+           </li>
+
+           <li class="p-2">
+            ضعف التفاعل الاجتماعي: انشغال الأطفال بالتكنولوجيا قد يقلل من تواصلهم مع الأصدقاء والعائلة، ويؤثر على تنمية مهاراتهم الاجتماعية.
+           </li>
+
+           <li class="p-2">
+                تنمية الإبداع: تُمكّن أدوات التصميم والابتكار المدعومة بالذكاء الاصطناعي الأطفال من التعبير عن أفكارهم بطرق جديدة، سواء عبر الرسم الرقمي أو صنع قصص وألعاب بسيطة.           </li>
+
+            <li class="p-2">
+            التعليم الشخصي: يعتمد الذكاء الاصطناعي على تحليل مستوى الطفل وسرعة تعلمه، ليقدم محتوى مناسبًا لقدراته، مما يجعل عملية التعلم أكثر فاعلية.           </li>
+       
+          <h2 class="text-2xl font-bold pb-2">التأثير السلبي للذكاء الاصطناعي على الأطفال</h2>
+
+                
+            <li class="p-2">
+                الإدمان على الأجهزة: قد يؤدي الإفراط في استخدام تطبيقات الذكاء الاصطناعي إلى قضاء وقت طويل أمام الشاشات، مما يؤثر سلبًا على الصحة الجسدية والنفسية.                 </li>
+       
+                <li class="p-2">
+                ضعف التفاعل الاجتماعي: انشغال الأطفال بالتكنولوجيا قد يقلل من تواصلهم مع الأصدقاء والعائلة، ويؤثر على تنمية مهاراتهم الاجتماعية.                          </li>
+       
+                    <li class="p-2">
+                    مخاطر المحتوى غير المناسب: في حال عدم وجود رقابة كافية، قد يتعرض الأطفال لمحتوى غير ملائم يتم توليده عبر أدوات الذكاء الاصطناعي.     </li>  
+   
+                     <li class="p-2">
+                   الاعتماد المفرط على التقنية: يمكن أن يؤدي الاعتماد الكبير على الذكاء الاصطناعي إلى ضعف قدرات التفكير النقدي وحل المشكلات عند الأطفال، إذا لم يتم توجيههم بشكل صحيح.     </li>
+              
+               <h2 class="text-2xl font-bold pb-2">الخاتمة</h2>
+               <p>
+                يُعتبر الذكاء الاصطناعي سلاحًا ذا حدين بالنسبة للأطفال؛ فهو يحمل فرصًا هائلة للتعلم والتطوير، وفي الوقت نفسه يفرض تحديات تتطلب وعيًا ورقابة من الأهل والمربين. الحل يكمن في تحقيق التوازن بين الاستفادة من هذه التكنولوجيا الحديثة وبين توجيه الأطفال لاستخدامها بشكل صحي وآمن، لضمان بناء جيل واعٍ قادر على مواكبة المستقبل.
+               </p>
+                </div>
+
+ 
+
+
+
+
+    </div>
+
+    <div class="blog-details md:relative top-[-216px] m-3 md:m-0 md:w-[30%] shrink-0 bg-gray-100 dark:bg-gray-900 rounded-b-xl h-full">
+
+      
+        <div class="">
+            <img class="w-full rounded-t-[13px]"  src="assets/images/blogs/1.jpg" alt="">
+        </div>
+
+      <div class="p-5">
+        <p class="font-bold mb-[20px] text-2xl text-center text-blue-600 dark:text-yellow-500 ">   كافة التصنيفات </p>
+     <hr>
+      <div class="my-5 flex flex-col gap-3 dark:text-gray-300">
+
+         <span class="p-4 bg-slate-300 rounded-xl cursor-pointer mb-2">
+            <p class="text-xl font-bold dark:text-black"> الذكاء الاصطناعي</p>
+         </span>
+         <span class="p-4 bg-slate-300 rounded-xl cursor-pointer mb-2">
+            <p class="text-xl font-bold dark:text-black"> البرمجة</p>
+         </span>
+             <span class="p-4 bg-slate-300 rounded-xl cursor-pointer mb-2">
+            <p class="text-xl font-bold dark:text-black"> الروبوت</p>
+         </span>
+                <span class="p-4 bg-slate-300 rounded-xl cursor-pointer mb-2">
+            <p class="text-xl font-bold dark:text-black"> التصميم والديزاين</p>
+         </span>
+      </div>
+      <hr>
+      <h2 class="text-2xl  text-blue-600 dark:text-yellow-500 text-center font-bold my-2">احدث المقالات</h2>
+      
+
+      <div class="">
+
+        <div class=" flex justify-between items-center cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-500 p-3 my-2 rounded-xl">
+
+          <div class=" dark:text-gray-200 ">
+              <h3 class="p-2">ما مدى سهولة بايثون للاطفال</h3>
+           <span>
+            <i class="fa-solid fa-calendar"></i>
+            29/9/2025
+           </span>
+          </div>
+           <img class="w-25 h-25 rounded-2xl p-2" src="assets/images/courses/Python.jpg" alt="">
+        </div>
+        <hr>
+         <div class=" flex justify-between items-center cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-500 p-3 my-2 rounded-xl">
+
+          <div class="dark:text-gray-200">
+              <h3 class="p-2">البرمجة وقدردات الاطفال</h3>
+           <span>
+            <i class="fa-solid fa-calendar"></i>
+            29/9/2025
+           </span>
+          </div>
+           <img class="w-25 h-25 rounded-2xl p-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5nzbxcdAZl694z_hrILmWHTj1nu60xlHmNw&s" alt="">
+        </div>
+        <hr>
+            <div class=" flex justify-between items-center cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-500 p-3 my-2 rounded-xl">
+
+          <div class="dark:text-gray-200">
+              <h3 class="p-2">من الرسم إلى الإبداع الرقمي</h3>
+           <span>
+            <i class="fa-solid fa-calendar"></i>
+            30/9/2025
+           </span>
+          </div>
+           <img class="w-25 h-25 rounded-2xl p-2" src="data:image/jpeg;base64,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" alt="">
+        </div>
+      </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- start footer  -->
+
+<footer class="p-5 bg-gray-700 ">
+  <div class="max-w-screen-xl mx-auto">
+<div class="grid grid-cols-2 gap-3 md:grid-cols-4">
+
+       <div class="py-[30px]">
+            <h2 class="pb-4 text-2xl font-semibold text-white uppercase">روابط سريعة </h2>
+            <ul class="font-medium text-gray-300">
+                <li class="mb-5">
+                    <a href="#" class=" hover:underline"> من نحن </a>
+                </li>
+                <li class="mb-5">
+                    <a href="#" class="hover:underline">الكورسات </a>
+                </li>
+                <li class="mb-5">
+                    <a href="#" class="hover:underline">الأسئلة الشائعة</a>
+                </li>
+                <li class="mb-5">
+                    <a href="#" class="hover:underline">المقالات</a>
+                </li>
+            </ul>
+        </div>
+
+
+<div class="py-[30px]">
+            <h2 class="text-2xl font-semibold text-white uppercase mb-7">الاقسام  </h2>
+            <ul class="font-medium text-gray-300">
+                <li class="mb-5">
+                    <a href="#" class=" hover:underline"> Web Development</a>
+                </li>
+                <li class="mb-5">
+                    <a href="#" class="hover:underline">Python Development </a>
+                </li>
+                <li class="mb-5">
+                    <a href="#" class="hover:underline">Graphic Design</a>
+                </li>
+                <li class="mb-5">
+                    <a href="#" class="hover:underline">artificial intelligence</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="py-[30px]">
+            <h2 class="text-2xl font-semibold text-white uppercase mb-7">تواصل معنا   </h2>
+            <ul class="font-medium text-gray-300">
+                <li class="flex items-center mb-5 ">
+                  <i class="ml-3 text-xl text-white fa-solid fa-phone-volume"></i>
+                    <a href="#" class=" hover:underline"> 00963 030425360 </a>
+                </li>
+
+             <li class="flex items-center mb-5 ">
+                  <i class="ml-3 text-xl text-white fa-solid fa-envelope"></i>
+                    <a href="#" class=" hover:underline"> contact@goldenacademy.example</a> 
+                </li>
+            </ul>
+        </div>
+
+
+         <div class="py-[30px] relative z-10">
+          <div class="absolute inset-0 z-0">
+            <img class=" opacity-20 w-50 img-scale" src="assets/images/dots.svg" alt="">
+          </div>
+
+            <div class="relative z-10">
+              <h2 class="text-2xl font-semibold text-white uppercase mb-7">يمكنك متابعتنا  ايضا    </h2>
+            <ul class="font-medium text-gray-300">
+                <li class="flex items-center mb-5 ">
+                  <a href="#"><i class="ml-4 text-xl fa-brands fa-instagram hover:text-red-400"></i></a>
+                    <a href="#" class=" hover:text-red-400"> Instagram </a>
+                </li>
+
+                 <li class="flex items-center mb-5 ">
+                  <a href="#"><i class="ml-4 text-xl fa-brands fa-facebook hover:text-blue-500"></i></a>
+                    <a href="#" class=" hover:text-blue-500"> Facebook </a>
+                </li>
+
+              <li class="flex items-center mb-5 ">
+                  <a href="#"><i class="ml-4 text-xl fa-brands fa-whatsapp hover:text-green-500"></i></a>
+                    <a href="#" class=" hover:text-green-500"> Whatsapp </a>
+                </li>
+                <li class="flex items-center mb-5 ">
+                  <a href="#"><i class="ml-4 text-xl fa-brands fa-twitter hover:text-blue-500"></i></a>
+                    <a href="#" class=" hover:text-blue-500"> Twitter </a>
+                </li>
+
+            </ul>
+            </div>
+
+        </div>
+
+
+
+       </div>
+       <hr class="mb-5 text-white">
+       
+       <div class="grid items-center justify-between grid-cols-1 gap-3 py-3 md:grid-cols-2 ">
+        
+        <div class="flex">
+          <img class="w-[150px]" src="assets/images/logo-Academy.webp" alt="">
+      <span class="self-center text-xl font-semibold text-white whitespace-nowrap">الأكاديمية الذهبية  </span>
+
+        </div>
+
+        <div class="">
+          <p class="text-lg text-white ">
+            كافة حقوق النشر محفوظة © 2024 الأكاديمية الذهبية .
+          </p>
+        </div>
+        
+
+       
+       </div>
+
+       </div>
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+<!-- End footer  -->
+
+
+<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>

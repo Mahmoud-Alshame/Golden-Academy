@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    font-family: Cairo;
+}
+li{
+  list-style: none;
+}
+.btn{
+  /* background-color: blue; */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.btn:hover{
+    background-color: blue;
+}
+
+.img-translate {
+    animation: translate-img 1s ease-in-out infinite;
+}
+  @keyframes translate-img {
+    0%,
+    100% {
+      transform: translateX(-7px);
+    }
+    50% {
+      transform: translateX(7px);
+    }
+  }
+
+   @keyframes scale-img {
+    0%,
+    100% {
+      transform:scale(1.2);
+    }
+    50% {
+           transform:scale(1.05);
+    }
+  }
+  .img-scale {
+    animation:scale-img 1.5s ease-in-out infinite ;
+  }
+
+
+  .swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none !important;
+}
+
+
+
+.img-top-bottom {
+    animation: img-top-bottom 1.5s ease-in-out infinite;
+}
+  @keyframes img-top-bottom {
+    0%,
+    100% {
+      transform: translateY(-17px);
+    }
+    50% {
+      transform: translateY(17px);
+    }
+  }
+
+
+  @keyframes marquee {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+
+
+
+}
+
+.animate-marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 70s linear infinite;
+}

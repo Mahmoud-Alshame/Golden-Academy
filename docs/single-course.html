@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en" class="dark" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  الكورسات | الاكاديمية الذهبية </title>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="icon" href="assets/images/logo-Academy.webp" type="image/x-icon">
+    
+    <!-- google fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Manrope:wght@200..800&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+
+<!-- font Awesome -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- SwiperJS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+      <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    
+</head>
+<body>
+
+<!-- Start Navbar -->
+
+<nav class="fixed top-0 left-0 z-50 w-full bg-white border-gray-200 dark:bg-slate-800 drop-shadow-lg">
+  <div class="flex flex-wrap items-center justify-between max-w-screen-xl p-1 mx-auto">
+  <a href="index.html" class="flex items-center space-x-1 rtl:space-x-reverse">
+      <img src="assets/images/logo-Academy.webp" class="h-[90px] w-25" alt="Flowbite Logo" />
+      <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">الأكاديمية الذهبية  </span>
+  </a>
+  <div class="flex space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse">
+      <button type="button" class="px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg dark:bg-yellow-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300  dark:hover:bg-blue-700 dark:focus:ring-blue-800">ابدأ الآن </button>
+      <button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-cta" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+  </div>
+  <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+    <ul class="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg md:items-center md:p-0 bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+      <li>
+        <a href="index.html" class="block px-3 py-2 text-white rounded-sm md:p-0 md:bg-transparent md:text-blue-700 md:dark:text-yellow-500" aria-current="page">الرئيسية</a>
+      </li>
+      <li>
+        <a href="#related-courses" class="block px-3 py-2 text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-yellow-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">الكورسات</a>
+      </li>
+      <li>
+        <a href="#reviews" class="block px-3 py-2 text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-yellow-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">التقييمات</a>
+      </li>
+      <li>
+        <a href="#Blog" class="block px-3 py-2 text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-yellow-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">اتصل بنا</a>
+      </li>
+
+      <li class="md:mr-[20px]">
+        <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-lg text-sm p-2.5">
+    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+    </button>
+      </li>
+
+    </ul>
+  </div>
+  </div>
+</nav>
+
+<!-- End Navbar -->
+
+
+
+
+<!-- start course-page-header -->
+
+<section class="pt-[150px] pb-[75px] bg-blue-100 dark:bg-slate-700 ">
+    <div class="flex max-w-screen-xl mx-auto page-header justify-content-between">
+        <div class="flex flex-col justify-center grow">
+            <h1 class=" text-center md:text-right mb-5 text-4xl font-bold text-blue-00 dark:text-yellow-500 ">
+                كورس بايثون للاطفال 
+            </h1>
+            <p class="text-center md:text-right mb-4 font-bold dark:text-gray-200">  تم الاعطاء من قبل المدرب <span > ياسين</span></p>
+
+            <div class=" flex justify-center md:justify-start gap-3 dark:text-gray-300">
+                <div>
+                    <i class="text-xl fa-regular fa-circle-check"></i>
+                    2025 / نيسان
+                </div>
+
+                 <div>
+                    <i class="text-xl fa-solid fa-stopwatch"></i>
+                    15 جلسة               
+                </div>
+
+                 <div>
+                   <i class="text-xl fa-solid fa-globe"></i>
+                    العربية
+                </div>
+            </div>
+        </div>
+        
+
+
+    </div>
+</section>
+
+<!-- end course-page-header -->
+
+
+
+<!-- start content -->
+
+<section class="main-content  dark:bg-gray-800">
+  <div class="max-w-screen-xl mx-auto inner-content flex flex-col-reverse md:flex-row justify-between gap-5">
+
+    <div class="content m-3 md:m-0  grow dark:text-gray-300">
+
+      
+
+<div class="c-tabs text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">
+    <ul class="flex flex-wrap -mb-px " data-tabs-toggle="#tabcontent">
+
+        <li class="me-2">
+            <a href="#" data-tabs-target="#description" role="tab" aria-controls="description" aria-selected="true" class="inline-block p-4 border-b-2 border-transparent rounded-t-lg ">تفاصيل الكورس </a>
+        </li>
+        <li class="me-2">
+            <a href="#" data-tabs-target="#curriculum" role="tab" aria-controls="curriculum" aria-selected="false" class="inline-block p-4 rounded-t-lg  " >محتوى الكورس</a>
+        </li>
+        <li class="me-2">
+            <a href="#" data-tabs-target="#about" role="tab" aria-controls="about" aria-selected="false" class="inline-block p-4 border-b-2 border-transparent rounded-t-lg "> حول المدرب</a>
+        </li>
+      
+       
+    </ul>
+</div>
+
+
+      <div id="tabcontent" >
+
+            <div id="description" class="mt-3">
+              <h2 class="p-3 bg-gray-100 rounded-[10px] dark:bg-gray-900 my-4">
+                ماذا سوف تتعلم ؟
+              </h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-2 bg-gray-100 dark:bg-gray-900 p-4 rounded-[10px]">
+             
+
+                <div class="">
+                
+                  <ul class="flex flex-col gap-4">
+                    <li>
+                      <i class="fa-solid fa-check text-blue-600 dark:text-yellow-500"></i>
+                      <span> 
+                        فهم الاساسيات : مثل المتغيرات، الجمل الشرطية، والحلقات 
+                      </span>
+                    </li>
+                       <li>
+                      <i class="fa-solid fa-check text-blue-600 dark:text-yellow-500"></i>
+                      <span> 
+                      كتابة أولى الأكواد : باستخدام محرر سهل ومناسب للأطفال.
+                      </span>
+                    </li>
+
+                        <li>
+                      <i class="fa-solid fa-check text-blue-600 dark:text-yellow-500"></i>
+                      <span> 
+                      إنشاء ألعاب بسيطة: مثل لعبة التخمين أو لعبة المتاهة .
+                      </span>
+                    </li>
+                      <li>
+                      <i class="fa-solid fa-check text-blue-600 dark:text-yellow-500"></i>
+                      <span>  
+                          التفكير المنطقي وحل المشكلات: عبر تمارين تفاعلية ممتعة.
+                      </span>
+                    </li>
+
+                  </ul>
+                </div>
+
+                <div class="">
+                     <ul class="flex flex-col gap-4">
+                    <li>
+                      <i class="fa-solid fa-check text-blue-600 dark:text-yellow-500"></i>
+                      <span> 
+                        التعرف على الأخطاء وتصحيحها: بأسلوب التجربة.
+                      </span>
+                    </li>
+                       <li>
+                      <i class="fa-solid fa-check text-blue-600 dark:text-yellow-500"></i>
+                      <span> 
+                      تنفيذ مشاريع صغيرة: مثل آلة حاسبة أو برنامج عداد.
+                      </span>
+                    </li>
+
+                        <li>
+                      <i class="fa-solid fa-check text-blue-600 dark:text-yellow-500"></i>
+                      <span> 
+                    استخدام البرمجة في الحياة اليومية: مثل تنظيم المهام.
+                      </span>
+                    </li>
+                      <li>
+                      <i class="fa-solid fa-check text-blue-600 dark:text-yellow-500"></i>
+                      <span>  
+                        الاستعداد لمستوى أعلى في البرمجة.
+                      </span>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+
+              <p class="my-4 leading-10 bg-gray-100 p-4 rounded-[10px] dark:bg-gray-900">
+                كورس "بايثون للأطفال" من الأكاديمية الذهبية هو تجربة تعليمية ممتعة ومبسطة للأطفال من عمر 8 إلى 14 سنة، تهدف إلى تنمية مهارات التفكير المنطقي والبرمجة بأسلوب تفاعلي. يتعلم الطفل أساسيات لغة بايثون من خلال ألعاب ومشاريع صغيرة، دون الحاجة لأي خلفية مسبقة. يشمل الكورس فيديوهات قصيرة، تمارين عملية، ودعم مباشر من مدرب متخصص، مع شهادة إنجاز عند الانتهاء. محتوى الكورس مصمم خصيصًا ليكون سهل الفهم، محفزًا للإبداع، ومتاح مدى الحياة عبر منصة الأكاديمية.
+              </p>
+
+              <p class="my-4 leading-10 bg-gray-100 p-4 rounded-[10px] dark:bg-gray-900">
+                كورس بايثون للأطفال في الأكاديمية الذهبية هو رحلة ممتعة لاكتشاف عالم البرمجة بلغة يفهمها الصغار. نمزج بين اللعب والتعلم لنمنح الطفل تجربة تفاعلية تبني مهاراته وتغذي فضوله التقني. كل درس مصمم ليكون بسيطًا، محفزًا، ويشجع الطفل على الإبداع والتجربة دون خوف من الخطأ. في نهاية الكورس، لا يكتسب الطفل معرفة تقنية فقط، بل ثقة في نفسه وقدرته على بناء أفكار رقمية خاصة به.
+              </p>
+
+              <div class="flex gap-5">
+                <img class="rounded-[10px] w-50" src="data:image/jpeg;base64,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" alt="">
+                <img class="rounded-[10px] w-50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZib9dKs1gB3rcUyq8MR9p3EiJkRdUH92pYQ&s" alt="">
+                
+              </div>
+
+              <p class="my-4 leading-10 bg-gray-100 p-4 rounded-[10px] dark:bg-gray-900">
+                بعد انتهاء الكورس وحصول الطفل على الشهادة، يكون قد اكتسب أساسًا قويًا في البرمجة بلغة بايثون بطريقة ممتعة ومبسطة. يصبح الطفل قادرًا على التفكير المنطقي، تنفيذ مشاريع صغيرة، وفهم كيفية بناء البرامج التفاعلية. هذه المهارات تفتح له الباب لاستكشاف مستويات أكثر تقدمًا في البرمجة أو المشاركة في مسابقات تقنية مستقبلية. كما تمنحه الثقة في قدراته الرقمية وتساعده على التميز في بيئة تعليمية حديثة
+              </p>
+
+              <img class="rounded-[10px] w-full" src="data:image/jpeg;base64,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" alt="">
+
+            </div>
+
+            <div id="curriculum" class="mt-3">
+
+              <div class="" id="accordion-open" data-accordion="open">
+
+  <h2 class="bg-gray-300 rounded-t-xl" id="accordion-open-heading-1 " >
+    <button type="button" class="flex items-center justify-between w-full gap-3 p-5 font-medium text-gray-500 border border-b-0 border-gray-200 rtl:text-right rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-open-body-1" aria-expanded="true" aria-controls="accordion-open-body-1">
+      <span class="flex items-center text-xl text-blue-600 dark:text-yellow-500"><svg class="w-5 h-5 me-2 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg> مقدمة إلى البرمجة</span>
+      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+      </svg>
+    </button>
+  </h2>
+  <div id="accordion-open-body-1" class="hidden" aria-labelledby="accordion-open-heading-1">
+    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+
+      <h2 class="py-3 text-2xl">
+        الدرس 1: ما هي البرمجة؟
+      </h2>
+
+      <div class="flex justify-between">
+        <p>
+          شرح مبسط لمفهوم البرمجة وأهميتها في حياتنا اليومية، مع أمثلة واقعية يفهمها الطفل.
+        </p>
+        <span>
+          30 دقيقة 
+          <i class="fa-regular fa-circle-play text-blue-600 dark:text-yellow-500 text-xl"></i>
+        </span>
+      </div>
+      <hr class="my-6">
+
+         <h2 class="py-3 text-2xl">
+        الدرس 2: التعرف على لغة بايثون
+      </h2>
+
+      <div class="flex justify-between">
+        <p>
+      مقدمة للغة بايثون ولماذا هي مناسبة للأطفال، مع تجربة كتابة أول سطر برمجي.
+        </p>
+        <span>
+          30 دقيقة 
+          <i class="fa-regular fa-circle-play text-blue-600 dark:text-yellow-500 text-xl"></i>
+        </span>
+      </div>
+      
+
+    </div>
+  </div>
+
+
+  <h2 id="accordion-open-heading-2" class="bg-gray-300">
+    <button type="button" class="flex items-center justify-between w-full gap-3 p-5 font-medium text-gray-500 border border-b-0 border-gray-200 rtl:text-right focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-open-body-2" aria-expanded="false" aria-controls="accordion-open-body-2">
+      <span class="flex items-center text-xl text-blue-500 dark:text-yellow-500"><svg class="w-5 h-5 me-2 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>المتغيرات والأنواع</span>
+      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+      </svg>
+    </button>
+  </h2>
+  <div id="accordion-open-body-2" class="hidden" aria-labelledby="accordion-open-heading-2">
+    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+
+       <h2 class="py-3 text-2xl">
+    الدرس 3: ما هو المتغير؟
+      </h2>
+
+      <div class="flex justify-between">
+        <p>
+          شرح مفهوم المتغيرات بطريقة تشبه الصناديق التي نخزن فيها المعلومات.
+        </p>
+        <span>
+          30 دقيقة 
+          <i class="fa-regular fa-circle-play text-blue-600 dark:text-yellow-500 text-xl"></i>
+        </span>
+      </div>
+      <hr class="my-6">
+         <h2 class="py-3 text-2xl">
+    الدرس 4: أنواع البيانات في بايثون
+      </h2>
+
+      <div class="flex justify-between">
+        <p>
+        التعرف على الأنواع الأساسية مثل الأرقام والنصوص، مع تمارين تفاعلية.
+        </p>
+        <span>
+          30 دقيقة 
+          <i class="fa-regular fa-circle-play text-blue-600 dark:text-yellow-500 text-xl"></i>
+        </span>
+      </div>
+
+    </div>
+  </div>
+
+
+  <h2 id="accordion-open-heading-3 " class="bg-gray-300">
+    <button type="button" class="flex items-center justify-between w-full gap-3 p-5 font-medium text-gray-500 border border-gray-200 rtl:text-right focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-open-body-3" aria-expanded="false" aria-controls="accordion-open-body-3">
+      <span class="flex items-center text-xl text-blue-500 dark:text-yellow-500"><svg class="w-5 h-5 me-2 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg> الجمل الشرطية</span>
+      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+      </svg>
+    </button>
+  </h2>
+
+  <div id="accordion-open-body-3" class="hidden" aria-labelledby="accordion-open-heading-3">
+    <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+      <h2 class="py-3 text-2xl">
+   الدرس 5: اتخاذ القرار باستخدام if
+      </h2>
+
+      <div class="flex justify-between">
+        <p>
+        تعلم كيفية جعل البرنامج يتخذ قرارات بناءً على شروط، مثل "إذا كانت الإجابة صحيحة، قل ممتاز!"
+        </p>
+        <span>
+          30 دقيقة 
+          <i class="fa-regular fa-circle-play text-blue-600 dark:text-yellow-500 text-xl"></i>
+        </span>
+      </div>
+       <hr class="my-6">
+
+         <h2 class="py-3 text-2xl">
+   الدرس 6: استخدام else وelif
+      </h2>
+
+      <div class="flex justify-between">
+        <p>
+        توسيع منطق الشروط لتغطية أكثر من حالة، مع أمثلة من الحياة اليومية.
+        </p>
+        <span>
+          30 دقيقة 
+          <i class="fa-regular fa-circle-play text-blue-600 dark:text-yellow-500 text-xl"></i>
+        </span>
+      </div>
+    
+    </div>
+  </div>
+
+
+  <h2 id="accordion-open-heading-4 " class="bg-gray-300">
+    <button type="button" class="flex items-center justify-between w-full gap-3 p-5 font-medium text-gray-500 border border-gray-200 rtl:text-right focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-open-body-4" aria-expanded="false" aria-controls="accordion-open-body-4">
+      <span class="flex items-center text-xl text-blue-500 dark:text-yellow-500"><svg class="w-5 h-5 me-2 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg> الحلقات والتكرار</span>
+      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+      </svg>
+    </button>
+  </h2>
+
+  <div id="accordion-open-body-4" class="hidden" aria-labelledby="accordion-open-heading-4">
+    <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+      <h2 class="py-3 text-2xl">
+  الدرس 7: حلقة for
+      </h2>
+
+      <div class="flex justify-between">
+        <p>
+       شرح كيفية تكرار الأوامر باستخدام for، مثل عد الأرقام أو تكرار رسالة.
+        </p>
+        <span>
+          30 دقيقة 
+          <i class="fa-regular fa-circle-play text-blue-600 dark:text-yellow-500 text-xl"></i>
+        </span>
+      </div>
+       <hr class="my-6">
+
+         <h2 class="py-3 text-2xl">
+   الدرس 8: حلقة while
+      </h2>
+
+      <div class="flex justify-between">
+        <p>
+        تعلم التكرار حتى يتحقق شرط معين، مع تطبيقات بسيطة مثل لعبة التخمين.
+        </p>
+        <span>
+          30 دقيقة 
+          <i class="fa-regular fa-circle-play text-blue-600 dark:text-yellow-500 text-xl"></i>
+        </span>
+      </div>
+    
+    </div>
+  </div>
+
+    <h2 id="accordion-open-heading-5 " class="bg-gray-300">
+    <button type="button" class="flex items-center justify-between w-full gap-3 p-5 font-medium text-gray-500 border border-gray-200 rtl:text-right focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-open-body-5" aria-expanded="false" aria-controls="accordion-open-body-5">
+      <span class="flex items-center text-xl text-blue-500 dark:text-yellow-500"><svg class="w-5 h-5 me-2 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg> التعامل مع النصوص</span>
+      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+      </svg>
+    </button>
+  </h2>
+
+  <div id="accordion-open-body-5" class="hidden" aria-labelledby="accordion-open-heading-5">
+    <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+      <h2 class="py-3 text-2xl">
+  الدرس 9: طباعة وتعديل النصوص
+      </h2>
+
+      <div class="flex justify-between">
+        <p>
+      كيفية طباعة الجمل وتعديلها، مثل تحويل الأحرف إلى كبيرة أو صغيرة.
+        </p>
+        <span>
+          30 دقيقة 
+          <i class="fa-regular fa-circle-play text-blue-600 dark:text-yellow-500 text-xl"></i>
+        </span>
+      </div>
+       <hr class="my-6">
+
+         <h2 class="py-3 text-2xl">
+   الدرس 10: دمج النصوص مع المتغيرات
+      </h2>
+
+      <div class="flex justify-between">
+        <p>
+       تعلم كيفية إنشاء جمل ديناميكية باستخدام المتغيرات داخل النصوص.
+        </p>
+        <span>
+          30 دقيقة 
+          <i class="fa-regular fa-circle-play text-blue-600 dark:text-yellow-500 text-xl"></i>
+        </span>
+      </div>
+    
+    </div>
+  </div>
+
+    <h2 id="accordion-open-heading-6 " class="bg-gray-300">
+    <button type="button" class="flex items-center justify-between w-full gap-3 p-5 font-medium text-gray-500 border border-gray-200 rtl:text-right focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-open-body-6" aria-expanded="false" aria-controls="accordion-open-body-6">
+      <span class="flex items-center text-xl text-blue-500 dark:text-yellow-500"><svg class="w-5 h-5 me-2 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg> مشروع تطبيقي نهائي</span>
+      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+      </svg>
+    </button>
+  </h2>
+
+  <div id="accordion-open-body-6" class="hidden" aria-labelledby="accordion-open-heading-6">
+    <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+      <h2 class="py-3 text-2xl">
+  الدرس 11: بناء لعبة بسيطة
+      </h2>
+
+      <div class="flex justify-between">
+        <p>
+      تطبيق شامل لما تعلمه الطفل لبناء لعبة مثل "تخمين الرقم" أو "الأسئلة السريعة".
+        </p>
+        <span>
+          60 دقيقة 
+          <i class="fa-regular fa-circle-play text-blue-600 dark:text-yellow-500 text-xl"></i>
+        </span>
+      </div>
+       <hr class="my-6">
+
+         <h2 class="py-3 text-2xl">
+   الدرس 12: مراجعة وتقديم المشروع
+      </h2>
+
+      <div class="flex justify-between">
+        <p>
+       مراجعة عامة للكورس، وتشجيع الطفل على تقديم مشروعه النهائي أمام العائلة أو الأصدقاء.
+        </p>
+        <span>
+          40 دقيقة 
+          <i class="fa-regular fa-circle-play text-blue-600 dark:text-yellow-500 text-xl"></i>
+        </span>
+      </div>
+    
+    </div>
+  </div>
+
+</div>
+            
+            </div>
+
+            <div id="about" class="mt-3">
+            <h2 class="text-2xl font-bold text-blue-500 dark:text-yellow-500">
+              المدرب ياسين ياسين
+            </h2>
+            <div class="flex gap-5 items-center mt-3">
+              <img src="https://www.w3schools.com/w3css/img_avatar.png" alt="Avatar" class="w-25 h-25 rounded-full object-cover">
+              <span>
+                <i class="fa-solid fa-user-group"></i>
+                200 طالب
+              </span>
+                 <span>
+                <i class="fa-solid fa-boxes-stacked"></i>
+                20 كورس
+              </span>
+            </div>
+            <p class="mt-3">
+              مطور ويب - مدير شركة كلاود سوفت 
+            </p>
+
+            <div class="flex mt-3 gap-4 cursor-pointer text-2xl mb-[80px]">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-twitter"></i>
+
+            </div>
+          
+
+           
+
+        
+            </div>
+
+      </div>
+
+
+      <!-- start reviews -->
+
+      <div id="reviews" class="reviews my-[100px] p-4 rounded-[10px] bg-gray-100 dark:bg-gray-900">
+        <h2 class="text-3xl font-bold text-yellow-500">
+          التقييمات
+        </h2>
+        <div class="flex items-center gap-3">
+          <h2 class="text-3xl font-bold my-4">120</h2>
+
+          <div class="text-yellow-500 flex gap-3">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+        </div>
+
+        <div class="Brogress">
+
+          <div class="flex items-center gap-5 mb-3">
+            <span class="text-xl font-bold">5</span>
+            <span class="text-xl font-bold">50% </span>        
+          <div class="w-full bg-gray-200 rounded-full h-2.5  dark:bg-gray-700">
+            <div class="bg-yellow-400 h-2.5 rounded-full" style="width: 50%"></div>
+          </div>
+
+          </div>
+
+             <div class="flex items-center gap-5 mb-3">
+            <span class="text-xl font-bold">4</span>
+            <span class="text-xl font-bold">20% </span>        
+          <div class="w-full bg-gray-200 rounded-full h-2.5  dark:bg-gray-700">
+            <div class="bg-yellow-400 h-2.5 rounded-full" style="width: 20%"></div>
+          </div>
+
+          </div>
+
+             <div class="flex items-center gap-5 mb-3">
+            <span class="text-xl font-bold">3</span>
+            <span class="text-xl font-bold">10% </span>        
+          <div class="w-full bg-gray-200 rounded-full h-2.5  dark:bg-gray-700">
+            <div class="bg-yellow-400 h-2.5 rounded-full" style="width: 10%"></div>
+          </div>
+
+          </div>
+
+                 <div class="flex items-center gap-5 mb-3">
+            <span class="text-xl font-bold">2</span>
+            <span class="text-xl font-bold">10% </span>        
+          <div class="w-full bg-gray-200 rounded-full h-2.5  dark:bg-gray-700">
+            <div class="bg-yellow-400 h-2.5 rounded-full" style="width: 10%"></div>
+          </div>
+
+          </div>
+
+
+                     <div class="flex items-center gap-5 mb-3">
+            <span class="text-xl font-bold">1</span>
+            <span class="text-xl font-bold">10% </span>        
+          <div class="w-full bg-gray-200 rounded-full h-2.5  dark:bg-gray-700">
+            <div class="bg-yellow-400 h-2.5 rounded-full" style="width: 10%"></div>
+          </div>
+
+          </div>
+
+        
+
+        </div>
+        
+      </div>
+
+
+      <!-- end reviews -->
+
+
+
+    </div>
+
+    <div class="course-details md:relative top-[-240px] m-3 md:m-0 md:w-[30%] shrink-0 bg-gray-100 dark:bg-gray-900 rounded-b-xl h-full">
+
+      
+        <div class="">
+            <img class="w-full rounded-t-[13px]"  src="assets/images/courses/Python.jpg" alt="">
+        </div>
+
+      <div class="p-5">
+        <p class="font-bold mb-[20px] text-2xl text-center text-red-600 underline">   السعر   :  150$  </p>
+      <button class="btn w-full bg-blue-600 dark:bg-yellow-500">إشترك الان</button>
+      <div class="my-5 flex flex-col gap-3 dark:text-gray-300">
+          <span>
+        <i class="fa-brands fa-google-scholar"></i>
+          الجهة المقدمة: الأكاديمية الذهبية  
+        </span>
+        <span>
+         <i class="fa-solid fa-children"></i>
+         الفئة العمرية المستهدفة: من 8 إلى 14 سنة
+        </span>
+         <span>
+        <i class="fa-solid fa-clock"></i>
+         مدة الكورس: 6 أسابيع (بمعدل 2 جلسة أسبوعيًا)
+        </span>
+         <span>
+         <i class="fa-solid fa-list-ol"></i>
+         عدد الدروس: 12 درس تفاعلي
+        </span>
+          <span>
+         <i class="fa-solid fa-laptop-code"></i>
+         طريقة التعلم: فيديوهات قصيرة + تمارين عملية + ألعاب برمجية
+        </span>
+         <span>
+         <i class="fa-solid fa-signal"></i>
+        مستوى الكورس: مبتدئ – لا يحتاج أي معرفة مسبقة
+        </span>
+   
+            <span>
+         <i class="fa-solid fa-star"></i>
+        تقييم أولياء الأمور: ⭐⭐⭐⭐ 
+        (  4.9 / 5)
+            </span>
+      </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- related courses -->
+
+  <div id="related-courses" class=" courses py-5 bg-gray-200 dark:bg-gray-900 ">
+  <h2 class="pb-4 text-3xl font-bold text-center text-blue-600 dark:text-yellow-500">   الكورسات المتعلقة </h2>
+
+  <div class="max-w-screen-xl mx-auto ">
+
+     <div class="overflow-hidden swiper1">
+        <div class="swiper-wrapper">
+
+          <!-- Card -->
+          <div class="swiper-slide">
+           <div class="p-5 bg-gray-300 dark:bg-gray-600 rounded-xl">
+            <img class="w-full h-[200px]" src="https://www.9jacodekids.com/wp-content/uploads/2025/06/generative-ai-course-kids-nigeria.webp" alt="">
+           
+              <h2 class="py-3 text-3xl font-bold text-center dark:text-yellow-500 line-clamp-1">AI for Kinds </h2>
+
+             <div class="">
+              <div class="flex items-center justify-around gap-4 py-3">
+
+                 <span class="text-xl"><i class="text-yellow-500 fa-solid fa-star "></i>4.5 (6.4K)</span>
+                  <div class="flex items-center">
+                                       <img  class="w-[60px] h-[60px] rounded-full object-cover pl-2" src="https://www.w3schools.com/w3css/img_avatar.png" alt="">
+
+                    <span class="text-xl">ياسين </span>
+                  </div>
+
+              </div>
+              <div class="flex items-center justify-around gap-4 py-3">
+                <span class="text-xl"><i class="pl-5 fa-solid fa-video"></i>20 جلسة</span>
+                <p class="text-xl font-bold text-red-600" >$148</p>
+
+              </div>
+             </div>
+
+             <hr>
+
+             <a href="single-course.html" class="flex justify-center mt-4 bg-blue-600 btn dark:bg-yellow-500" href="">اشترك الان</a>
+            
+         </div>
+          </div>
+
+          <div class="swiper-slide">
+           <div class="p-5 bg-gray-300 dark:bg-gray-700 rounded-xl">
+            <img class="w-full h-[200px]" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4Ee_Ege_hg2-ArCQV9amF3wllpeO_4tE4Trx2cf5C174w-q_Ez9wpJbF0uU4xhkM71dI&usqp=CAU" alt="">
+           
+              <h2 class="py-3 text-3xl font-bold text-center dark:text-yellow-500 line-clamp-1">Python for Kids </h2>
+
+             <div class="">
+              <div class="flex items-center justify-around gap-4 py-3">
+
+                 <span class="text-xl"><i class="text-yellow-500 fa-solid fa-star "></i>4.5 (6.4K)</span>
+                  <div class="flex items-center">
+                                        <img  class="w-[60px] h-[60px] rounded-full object-cover pl-2" src="https://www.w3schools.com/w3css/img_avatar.png" alt="">
+
+                    <span class="text-xl">وديع  </span>
+                  </div>
+
+              </div>
+              <div class="flex items-center justify-around gap-4 py-3">
+                <span class="text-xl"><i class="pl-5 fa-solid fa-video"></i>20 جلسة</span>
+                <p class="text-xl font-bold text-red-600" >$148</p>
+
+              </div>
+             </div>
+
+             <hr>
+
+             <a href="single-course.html" class="flex justify-center mt-4 bg-blue-600 btn dark:bg-yellow-500" href="">اشترك الان</a>
+            
+         </div>
+          </div>
+
+          <div class="swiper-slide">
+           <div class="p-5 bg-gray-300 dark:bg-gray-700 rounded-xl">
+            <img class="w-full h-[200px]" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPmbNEDhEppALMNB_UU52Be6JJF6BigNZ79KMi7k3Drp91Sufu5rETjH0mjEJjZ3v09cE&usqp=CAU" alt="">
+           
+              <h2 class="py-3 text-3xl font-bold text-center dark:text-yellow-500 line-clamp-2 line-clamp-1"> Web Design </h2>
+
+             <div class="">
+              <div class="flex items-center justify-around gap-4 py-3">
+
+                 <span class="text-xl"><i class="text-yellow-500 fa-solid fa-star "></i>4.5 (6.4K)</span>
+                  <div class="flex items-center">
+                                        <img  class="w-[60px] h-[60px] rounded-full object-cover pl-2" src="https://www.w3schools.com/w3css/img_avatar.png" alt="">
+
+                    <span class="text-xl">ياسين </span>
+                  </div>
+
+              </div>
+              <div class="flex items-center justify-around gap-4 py-3">
+                <span class="text-xl"><i class="pl-5 fa-solid fa-video"></i>30 جلسة</span>
+                <p class="text-xl font-bold text-red-600" >$148</p>
+
+              </div>
+             </div>
+
+             <hr>
+
+             <a href="single-course.html" class="flex justify-center mt-4 bg-blue-600 btn dark:bg-yellow-500" href="">اشترك الان</a>
+            
+         </div>
+          </div>
+
+          <div class="swiper-slide">
+           <div class="p-5 bg-gray-300 dark:bg-gray-700 rounded-xl">
+            <img class="w-full h-[200px]" src="https://wowtheme7.com/tf/eduall/demo/assets/images/thumbs/kids-courses-img4.png" alt="">
+           
+              <h2 class="py-3 text-3xl font-bold text-center dark:text-yellow-500 line-clamp-1">Smart Machines </h2>
+
+             <div class="">
+              <div class="flex items-center justify-around gap-4 py-3">
+
+                 <span class="text-xl"><i class="text-yellow-500 fa-solid fa-star "></i>4.5 (6.4K)</span>
+                  <div class="flex items-center">
+                                        <img  class="w-[60px] h-[60px] rounded-full object-cover pl-2" src="https://www.w3schools.com/w3css/img_avatar.png" alt="">
+
+                    <span class="text-xl">خالد </span>
+                  </div>
+
+              </div>
+              <div class="flex items-center justify-around gap-4 py-3">
+                <span class="text-xl"><i class="pl-5 fa-solid fa-video"></i>20 جلسة</span>
+                <p class="text-xl font-bold text-red-600" >$148</p>
+
+              </div>
+             </div>
+
+             <hr>
+
+             <a class="flex justify-center mt-4 bg-blue-600 btn dark:bg-yellow-500" href="">اشترك الان</a>
+            
+         </div>
+          </div>
+
+           <div class="swiper-slide">
+           <div class="p-5 bg-gray-300 dark:bg-gray-700 rounded-xl">
+            <img class="w-full h-[200px]" src="https://wowtheme7.com/tf/eduall/demo/assets/images/thumbs/kids-courses-img5.png" alt="">
+           
+              <h2 class="py-3 text-3xl font-bold text-center dark:text-yellow-500 line-clamp-1">Graphic Design </h2>
+
+             <div class="">
+              <div class="flex items-center justify-around gap-4 py-3">
+
+                 <span class="text-xl"><i class="text-yellow-500 fa-solid fa-star "></i>4.5 (6.4K)</span>
+                  <div class="flex items-center">
+                                        <img  class="w-[60px] h-[60px] rounded-full object-cover pl-2" src="https://www.w3schools.com/w3css/img_avatar.png" alt="">
+
+                    <span class="text-xl">خالد </span>
+                  </div>
+
+              </div>
+              <div class="flex items-center justify-around gap-4 py-3">
+                <span class="text-xl"><i class="pl-5 fa-solid fa-video"></i>20 جلسة</span>
+                <p class="text-xl font-bold text-red-600" >$148</p>
+
+              </div>
+             </div>
+
+             <hr>
+
+             <a class="flex justify-center mt-4 bg-blue-600 btn dark:bg-yellow-500" href="">اشترك الان</a>
+            
+         </div>
+          </div>
+
+
+  </div>
+
+  <div class="flex justify-center gap-4 pt-4 mt-6 ">
+          <button class="swiper-button-prev1 !static !w-10 !h-10 bg-white shadow rounded-full flex items-center justify-center cursor-pointer">
+            <i class="text-gray-700 fa-solid fa-chevron-right"></i>
+          </button>
+          <button class="swiper-button-next1 !static !w-10 !h-10 bg-white shadow rounded-full flex items-center justify-center cursor-pointer">
+            <i class="text-gray-700 fa-solid fa-chevron-left "></i>
+          </button>
+        </div>
+      </div>
+
+
+
+  <!-- related courses -->
+
+</section>
+
+<!-- end content -->
+
+
+
+
+
+<!-- start footer  -->
+
+<footer class="p-5 bg-gray-700 ">
+  <div class="max-w-screen-xl mx-auto">
+<div class="grid grid-cols-2 gap-3 md:grid-cols-4">
+
+       <div class="py-[30px]">
+            <h2 class="pb-4 text-2xl font-semibold text-white uppercase">روابط سريعة </h2>
+            <ul class="font-medium text-gray-300">
+                <li class="mb-5">
+                    <a href="#" class=" hover:underline"> من نحن </a>
+                </li>
+                <li class="mb-5">
+                    <a href="#" class="hover:underline">الكورسات </a>
+                </li>
+                <li class="mb-5">
+                    <a href="#" class="hover:underline">الأسئلة الشائعة</a>
+                </li>
+                <li class="mb-5">
+                    <a href="#" class="hover:underline">المقالات</a>
+                </li>
+            </ul>
+        </div>
+
+
+<div class="py-[30px]">
+            <h2 class="text-2xl font-semibold text-white uppercase mb-7">الاقسام  </h2>
+            <ul class="font-medium text-gray-300">
+                <li class="mb-5">
+                    <a href="#" class=" hover:underline"> Web Development</a>
+                </li>
+                <li class="mb-5">
+                    <a href="#" class="hover:underline">Python Development </a>
+                </li>
+                <li class="mb-5">
+                    <a href="#" class="hover:underline">Graphic Design</a>
+                </li>
+                <li class="mb-5">
+                    <a href="#" class="hover:underline">artificial intelligence</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="py-[30px]">
+            <h2 class="text-2xl font-semibold text-white uppercase mb-7">تواصل معنا   </h2>
+            <ul class="font-medium text-gray-300">
+                <li class="flex items-center mb-5 ">
+                  <i class="ml-3 text-xl text-white fa-solid fa-phone-volume"></i>
+                    <a href="#" class=" hover:underline"> 00963 030425360 </a>
+                </li>
+
+             <li class="flex items-center mb-5 ">
+                  <i class="ml-3 text-xl text-white fa-solid fa-envelope"></i>
+                    <a href="#" class=" hover:underline"> contact@goldenacademy.example</a> 
+                </li>
+            </ul>
+        </div>
+
+
+         <div class="py-[30px] relative z-10">
+          <div class="absolute inset-0 z-0">
+            <img class=" opacity-20 w-50 img-scale" src="assets/images/dots.svg" alt="">
+          </div>
+
+            <div class="relative z-10">
+              <h2 class="text-2xl font-semibold text-white uppercase mb-7">يمكنك متابعتنا  ايضا    </h2>
+            <ul class="font-medium text-gray-300">
+                <li class="flex items-center mb-5 ">
+                  <a href="#"><i class="ml-4 text-xl fa-brands fa-instagram hover:text-red-400"></i></a>
+                    <a href="#" class=" hover:text-red-400"> Instagram </a>
+                </li>
+
+                 <li class="flex items-center mb-5 ">
+                  <a href="#"><i class="ml-4 text-xl fa-brands fa-facebook hover:text-blue-500"></i></a>
+                    <a href="#" class=" hover:text-blue-500"> Facebook </a>
+                </li>
+
+              <li class="flex items-center mb-5 ">
+                  <a href="#"><i class="ml-4 text-xl fa-brands fa-whatsapp hover:text-green-500"></i></a>
+                    <a href="#" class=" hover:text-green-500"> Whatsapp </a>
+                </li>
+                <li class="flex items-center mb-5 ">
+                  <a href="#"><i class="ml-4 text-xl fa-brands fa-twitter hover:text-blue-500"></i></a>
+                    <a href="#" class=" hover:text-blue-500"> Twitter </a>
+                </li>
+
+            </ul>
+            </div>
+
+        </div>
+
+
+
+       </div>
+       <hr class="mb-5 text-white">
+       
+       <div class="grid items-center justify-between grid-cols-1 gap-3 py-3 md:grid-cols-2 ">
+        
+        <div class="flex">
+          <img class="w-[150px]" src="assets/images/logo-Academy.webp" alt="">
+      <span class="self-center text-xl font-semibold text-white whitespace-nowrap">الأكاديمية الذهبية  </span>
+
+        </div>
+
+        <div class="">
+          <p class="text-lg text-white ">
+            كافة حقوق النشر محفوظة © 2024 الأكاديمية الذهبية .
+          </p>
+        </div>
+        
+
+       
+       </div>
+
+       </div>
+
+</footer>
+
+
+<!-- End footer  -->
+
+
+<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
